@@ -313,9 +313,9 @@ public class AttendanceFragment extends BaseFragment {
 
     /////////// onClick ///////////////
     private void onSaveClick(){
-        if (prefrences.getDiv().equals("A")){
+        if ("A".equals(prefrences.getDiv())){
             prefrences.saveCounter(prefrences.getCounter()+1);
-        }else if (prefrences.getDiv().equals("B")){
+        }else if ("B".equals(prefrences.getDiv())){
             prefrences.saveCounterSecond(prefrences.getCounterSecond() +1);
         }
         for (int rollno : prefrences.getatData()){
@@ -332,10 +332,10 @@ public class AttendanceFragment extends BaseFragment {
                     prefrences.filterData(filterData);
                 }
             }
-            if (prefrences.getStatus().equals("present")){
+            if ("present".equals(prefrences.getStatus())){
                 Log.d("Log", "workingA");
                 adduncheckatData("absent");
-            }else if (prefrences.getStatus().equals("absent")){
+            }else if ("absent".equals(prefrences.getStatus())){
                 Log.d("Log", "workingP");
                 adduncheckatData("present");
             }

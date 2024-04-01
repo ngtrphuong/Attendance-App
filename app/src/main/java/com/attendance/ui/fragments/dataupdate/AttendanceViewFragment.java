@@ -86,9 +86,9 @@ public class AttendanceViewFragment extends BaseFragment {
     }
 
     private void calendarView(){
-        if (prefrences.getDiv().equals("A")){
+        if ("A".equals(prefrences.getDiv())){
             totalLect.setText("Total Lectures: " +String.valueOf(prefrences.getCounter()));
-        }else if (prefrences.getDiv().equals("B")){
+        }else if ("B".equals(prefrences.getDiv())){
             totalLect.setText("Total Lectures: " +String.valueOf(prefrences.getCounterSecond()));
         }
         final DatePickerFragment datePickerFragment = new DatePickerFragment();
@@ -153,9 +153,9 @@ public class AttendanceViewFragment extends BaseFragment {
         final String startDate = prefrences.getStartDate();
         final String endDate = prefrences.getEndDate();
         String lect = null;
-        if (prefrences.getDiv().equals("A")){
+        if ("A".equals(prefrences.getDiv())){
             lect = String.valueOf(prefrences.getCounter());
-        }else if (prefrences.getDiv().equals("B")){
+        }else if ("B".equals(prefrences.getDiv())){
             lect = String.valueOf(prefrences.getCounterSecond());
         }
         String div = prefrences.getDiv();
